@@ -4,6 +4,24 @@ All notable changes to JackcessDotNet are documented in this file. The format
 follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.1]
+
+### Changed
+
+- **Package metadata.** Added `PackageProjectUrl`, `RepositoryUrl`, and
+  `RepositoryType` so the nuget.org package page surfaces the GitHub repo
+  under "Project website" and "Source repository".
+- **SourceLink.** Added `Microsoft.SourceLink.GitHub` (PrivateAssets="All").
+  Consumers can now debug-step from the JackcessDotNet symbols into the
+  exact source on GitHub matching the published commit SHA.
+- **Deterministic builds in CI.** `ContinuousIntegrationBuild` enabled when
+  `GITHUB_ACTIONS=true` so the .nupkg shipped from CI is reproducible.
+- **README badges.** Added NuGet (version + downloads), GitHub (author + repo),
+  and license badges visible on both GitHub and the nuget.org package page.
+
+No library code changes vs. 1.2.0 — same `.dll` byte-for-byte aside from
+embedded SourceLink metadata.
+
 ## [1.2.0]
 
 ### Added

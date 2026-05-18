@@ -1,5 +1,11 @@
 # JackcessDotNet
 
+[![NuGet](https://img.shields.io/nuget/v/JackcessDotNet?logo=nuget&label=NuGet)](https://www.nuget.org/packages/JackcessDotNet)
+[![Downloads](https://img.shields.io/nuget/dt/JackcessDotNet?logo=nuget&label=Downloads)](https://www.nuget.org/packages/JackcessDotNet)
+[![GitHub](https://img.shields.io/badge/GitHub-mehran--ghanizadeh-181717?logo=github)](https://github.com/mehran-ghanizadeh)
+[![Repo](https://img.shields.io/badge/repo-jackcess--dotnet-181717?logo=github)](https://github.com/mehran-ghanizadeh/jackcess-dotnet)
+[![License](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
+
 Pure .NET 8 library for reading and writing Microsoft Access (`.mdb` / `.accdb`) files.
 No ODBC, no ACE drivers, no native dependencies — runs anywhere .NET 8 runs
 (Windows, Linux, macOS, containers).

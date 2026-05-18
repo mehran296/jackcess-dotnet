@@ -7,7 +7,7 @@
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <RootNamespace>JackcessDotNet</RootNamespace>
     <AssemblyName>JackcessDotNet</AssemblyName>
-    <Version>1.2.0</Version>
+    <Version>1.2.1</Version>
     <Description>Pure .NET 8 library for reading and writing Microsoft Access (.mdb) database files. Port of the Jackcess Java library.</Description>
     <Authors>Mehran Ghanizadeh</Authors>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
@@ -20,19 +20,27 @@
     <PackageOutputPath>$(MSBuildThisFileDirectory)..\..\artifacts</PackageOutputPath>
     <PackageTags>access;mdb;accdb;jet;jackcess;database</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+
+    <!-- GitHub linkage: surfaces "Project website" + "Source repository" on the nuget.org package page -->
+    <PackageProjectUrl>https://github.com/mehran-ghanizadeh/jackcess-dotnet</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mehran-ghanizadeh/jackcess-dotnet.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+
+    <!-- SourceLink: lets consumers step into this library's source on GitHub from their debugger -->
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
     <!--
       PackageReleaseNotes: a one-paragraph summary surfaced on nuget.org under
       "Release Notes". CHANGELOG.md ships inside the package for the full
       history; this short blurb tells consumers what's new in *this* release.
     -->
     <PackageReleaseNotes>
-      1.2.0 — Office Crypto write support (Agile + Standard + RC4 CryptoAPI +
-      Non-Standard AES), multi-column primary keys, opt-in foreign-key
-      enforcement on insert, ImportOptions.AppendIfExists for the wrapper.
-      Critical fix: .accdb encoding-key header demasking — every Office Crypto
-      variant decrypts pages correctly now. See CHANGELOG.md for full notes.
+      1.2.1 — Metadata-only release. Adds PackageProjectUrl, RepositoryUrl, and
+      Microsoft.SourceLink.GitHub so the nuget.org listing links back to the
+      GitHub repo and consumers can debug-step into source. README now carries
+      NuGet/GitHub/License badges. No library code changes vs. 1.2.0; see
+      CHANGELOG.md.
     </PackageReleaseNotes>
   </PropertyGroup>
 
@@ -44,6 +52,7 @@
 
   <ItemGroup>
     <PackageReference Include="System.Text.Encoding.CodePages" Version="8.0.0" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
