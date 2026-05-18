@@ -1,0 +1,39 @@
+# Build outputs
+**/bin/
+**/obj/
+artifacts/
+
+# IDE / editor
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.DotSettings.user
+
+# Test results
+TestResults/
+coverage*.xml
+coverage*.json
+*.coverage
+*.coveragexml
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local NuGet / restore caches
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+.nuget/
+
+# Rider
+_ReSharper.Caches/
+
+# JetBrains
+*.dotCover
