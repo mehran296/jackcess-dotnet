@@ -27,6 +27,10 @@ jobs:
         run: dotnet build JackcessDotNet.slnx --configuration Release --no-restore
 
       - name: Test
+        # Skip on v* tag pushes: tag pushes are deliberate releases, and several
+        # corpus-dependent tests rely on local fixtures at D:/Projects/jackcess-*
+        # that aren't present on GitHub-hosted runners. PR/main pushes still test.
+        if: "!startsWith(github.ref, 'refs/tags/v')"
         run: dotnet test JackcessDotNet.slnx --configuration Release --no-build --verbosity normal
 
       - name: Upload package artifact

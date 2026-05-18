@@ -7,7 +7,7 @@
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <RootNamespace>JackcessDotNet</RootNamespace>
     <AssemblyName>JackcessDotNet</AssemblyName>
-    <Version>1.2.1</Version>
+    <Version>1.2.2</Version>
     <Description>Pure .NET 8 library for reading and writing Microsoft Access (.mdb) database files. Port of the Jackcess Java library.</Description>
     <Authors>Mehran Ghanizadeh</Authors>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
@@ -37,11 +37,10 @@
       history; this short blurb tells consumers what's new in *this* release.
     -->
     <PackageReleaseNotes>
-      1.2.1 — Metadata-only release. Adds PackageProjectUrl, RepositoryUrl, and
-      Microsoft.SourceLink.GitHub so the nuget.org listing links back to the
-      GitHub repo and consumers can debug-step into source. README now carries
-      NuGet/GitHub/License badges. No library code changes vs. 1.2.0; see
-      CHANGELOG.md.
+      1.2.2 — Adds a package icon (jackcess.png). Same metadata + SourceLink
+      improvements introduced in 1.2.1 (PackageProjectUrl, RepositoryUrl,
+      Microsoft.SourceLink.GitHub, README badges). No library code changes
+      vs. 1.2.0; see CHANGELOG.md.
     </PackageReleaseNotes>
   </PropertyGroup>
 

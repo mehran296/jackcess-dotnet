@@ -4,6 +4,16 @@ All notable changes to JackcessDotNet are documented in this file. The format
 follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.2]
+
+### Added
+
+- **Package icon.** `jackcess.png` (256×256, ~48 KB) wired via
+  `<PackageIcon>` so the nuget.org listing renders an icon next to the
+  package title.
+
+No library code changes vs. 1.2.1.
+
 ## [1.2.1]
 
 ### Changed
